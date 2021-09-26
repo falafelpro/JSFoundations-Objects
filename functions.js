@@ -86,7 +86,7 @@ function getChannelByVideoTitle(videoTitle, channels) {
  ****************************************************************/
 function searchChannels(query, channels) {
   // Your code here
-  return channels.filter((channel) => channel.description.includes(query) )
+  return channels.filter((channel) => getChannelName(channel).includes(query) || channel.description.includes(query) )
 }
 // console.log(searchChannels("the", channels))
 
